@@ -11,9 +11,9 @@ odoo.define("orssica_sale.sale_form", function (require) {
 
     FormViewDialog.include({
         open: function () {
-            // 添加xm_readonly属性不弹窗
-            if (!this.context.xm_readonly) {
-                // 没有设置xm_readonly属性
+            // 添加x2m_readonly属性不弹窗
+            if (!this.context.x2m_readonly) {
+                // 没有设置x2m_readonly属性
                 this._super();
             }
         },
@@ -23,8 +23,8 @@ odoo.define("orssica_sale.sale_form", function (require) {
 
         _onEditLine:function(ev){
 
-            // xm_readonly 不予响应编辑事件
-            if(!this.field.context.xm_readonly){
+            // x2m_readonly 不予响应编辑事件
+            if(!this.field.context.x2m_readonly){
                 this._super(ev)
             }
             
@@ -47,8 +47,8 @@ odoo.define("orssica_sale.sale_form", function (require) {
             };
 
         
-            // 对于拥有xm_readonly属性的字段，不显示添加和删除按钮
-            if (this.field.context.xm_readonly){
+            // 对于拥有x2m_readonly属性的字段，不显示添加和删除按钮
+            if (this.field.context.x2m_readonly){
                 this.activeActions.create = false;
                 this.activeActions.delete = false;
             }
