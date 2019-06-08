@@ -1,4 +1,4 @@
-odoo.define("orssica_sale.sale_form", function (require) {
+odoo.define("x2m.x2m_readonly", function (require) {
     'use strict';
 
     //继承自web view_dialog

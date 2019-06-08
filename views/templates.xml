@@ -1,8 +1,8 @@
 <odoo>
     <data>
-        <template id="assets_backend_inherit_orssica_sale" inherit_id="web.assets_backend" name="Orssica sale assets">
+        <template id="assets_backend_inherit_x2m_readonly" inherit_id="web.assets_backend" name="Orssica sale assets">
             <xpath expr="script[last()]" position="after">
-                <script type="text/javascript" src="/orssica_sale/static/src/js/xmr.js"></script>
+                <script type="text/javascript" src="/x2m_readonly/static/src/js/xmr.js"></script>
             </xpath>
         </template>
 
