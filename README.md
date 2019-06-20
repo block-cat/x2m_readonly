@@ -15,3 +15,7 @@ after installing this module , just add context keyword in your fields declarati
 ```python
     x2m = fields.One2many(...,context="{'x2m_readonly':True}")
 ```
+
+if you just want to make pop up window readonly without stopping pop up, you can use x2m_open instead.
+
+如果希望能够弹窗，但是保持弹窗只读，请使用x2m_open.
