@@ -97,7 +97,7 @@ odoo.define("x2m.x2m_readonly", function (require) {
         _onEditLine: function (ev) {
 
             // x2m_readonly 不予响应编辑事件
-            if (!this.field.context.x2m_readonly) {
+            if (this.field.context && !this.field.context.x2m_readonly) {
                 this._super(ev)
             }
 
@@ -121,7 +121,7 @@ odoo.define("x2m.x2m_readonly", function (require) {
 
 
             // 对于拥有x2m_readonly属性的字段，不显示添加和删除按钮
-            if (this.field.context.x2m_readonly || this.field.context.x2m_open) {
+            if (this.field.context && (this.field.context.x2m_readonly || this.field.context.x2m_open)) {
                 this.activeActions.create = false;
                 this.activeActions.delete = false;
             }
